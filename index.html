@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berita Pilkada Gubernur Jakarta</title>
+    <title>Berita Pilkada Gubernur Maluku</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
@@ -16,8 +16,8 @@
       }
       #mobile-nav {
         z-index: 20; /* Pastikan menu mobile muncul di atas navbar */
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: 10%;
         left: 0;
         width: 100%;
         background-color: white;
@@ -361,11 +361,16 @@
     <script>
       const hamburgerBtn = document.getElementById("hamburger-btn");
       const mobileNav = document.getElementById("mobile-nav");
-      const navMenu = document.getElementById("nav-menu");
 
+      // Toggle the mobile menu visibility
       hamburgerBtn.addEventListener("click", () => {
         mobileNav.classList.toggle("hidden");
       });
+
+      // Function to hide mobile menu when an item is clicked
+      function hideMobileMenu() {
+        mobileNav.classList.add("hidden");
+      }
     </script>
   </body>
 </html>
